@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/styles.css">
+    <link rel="stylesheet" href="/Explosion/css/reset.css">
+    <link rel="stylesheet" href="/libs/modal/modal.css">
+    <script defer src="/libs/mask/inputmask.min.js"></script>
+    <script defer src="/libs/justvalidate/just-validate.min.js"></script>
+    <!-- <script defer type="module" src="/Scripts/forModal.js"></script> -->
+    <title>Магазин уходовой косметики</title>  
+</head>
+<body class="body">
+    <div class="overlay"></div>
+    <div class="menu-overlay"></div>
+    <header class="header flex">
+        <div class="header-logo">
+            <a href="/index.html" class="logo"><img src="/Images/test.svg"></a>
+        </div>
+        <form class="search_button">
+            <input class="search_bar" type="text" placeholder="Искать здесь...">
+            <button type="submit"><img src="/Images/icons8-search.svg"></button>
+            <ul class="search_list"></ul>
+        </form>
+        <ul class="header-menu flex">
+            <li class="menu-item">
+                <a href="/Pages/collections.html">Коллекции</a>
+            </li>
+            <li class="menu-item">
+                <a href="/Pages/catalog.html">Каталог</a>
+            </li>
+            <li class="menu-item">
+                <a href="/Pages/about.html">О нас</a>
+            </li>
+            <li class="menu-item">
+                <a class="cart-anchor" href="#">
+                    <p>
+                        Корзина
+                        <span class="cart-counter"></span>
+                    </p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/Pages/contacts.html">Контакты</a>
+            </li>
+        </ul>
+        <button class="burger-menu">
+            <span></span>
+        </button>
+        <nav class="header_nav">
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <form class="nav_search-button">
+                        <input class="nav_search_bar" type="text" placeholder="Искать здесь...">
+                        <button type="submit"><img src="/Images/icons8-search.svg"></button>
+                        <ul class="nav_search_list"></ul>
+                    </form>
+                </li>
+                <li class="nav_item"><a href="/Pages/collections.html">Коллекции</a></li>
+                <li class="nav_item"><a href="/Pages/catalog.html">Каталог</a></li>
+                <li class="nav_item"><a href="/Pages/about.html">О нас</a></li>
+                <li class="nav_item">
+                    <a class="cart-anchor" href="/Pages/cart.html">
+                        <p>
+                            Корзина
+                            <span class="cart-counter"></span>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav_item"><a href="/Pages/contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sitemap_line flex">
+        <a href="/index.html">Главная</a><span class="map_arrow"></span><span>Корзина</span>
+    </div>
+    <section class="cart-section">
+        <div class="section_title">Моя корзина</div>
+        <div class="cart-place flex">
+            <div class="cart-info">
+                <p>ДОСТАВКА БЕСПЛАТНО ДО ПУНКТА ВЫДАЧИ ПРИ ОПЛАТЕ ЗАКАЗА НА САЙТЕ</p>
+                <p><strong>Не хотите разбираться? Позвоните по номеру 8 (926) 092-86-00 и мы сделаем все за вас!</strong></p>
+            </div>
+            <div class="cart-summary flex">
+                <p class="cart-summary_price">Итоговая сумма заказа: <span class="ticket-summary"></span></p>
+                <button class="cart-summary_button btn-rst" data-graph-path="modal" data-graph-animation="fadeInUp" data-graph-speed="500">Оформить заказ</button>
+            </div>
+            <div class="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="129.188" height="114.562" viewBox="0 0 129.188 114.562">
+                    <path class="cls-1" d="M710.628,516.914a12.689,12.689,0,0,0,0,25.378A12.689,12.689,0,1,0,710.628,516.914Zm67.374,0a12.689,12.689,0,1,0,0,25.378A12.689,12.689,0,0,0,778,516.914Zm19.942-70.42a5.206,5.206,0,0,0-4.068-1.949H698.271L693.3,431.107a5.206,5.206,0,0,0-4.88-3.4H675.11a5.206,5.206,0,0,0,0,10.411h9.683L709.557,505a5.2,5.2,0,0,0,4.88,3.389c0.207,0,.417-0.013.624-0.027l69.421-8.331a5.218,5.218,0,0,0,4.473-4.046l10.019-45.108A5.215,5.215,0,0,0,797.944,446.494Zm-14.018,24.079h-20.8V454.956H787.4Zm-46.826,0V454.956h20.825v15.617H737.1Zm20.825,5.205v16.953L737.1,495.225V475.771h20.825v0.007Zm-26.031-20.822v15.617H707.906l-5.781-15.617h29.769Zm-22.059,20.822h22.059v20.084l-14,1.681Zm53.3,16.329V475.778h19.643l-3.186,14.35Z" transform="translate(-669.906 -427.719)"/>
+                </svg>
+                <p class="cart-value">
+                    Ваша корзина пуста
+                </p>
+            </div>            
+        </div>
+    </section>
+    <div class="modal">
+		<div class="modal__container order-modal" role="dialog" aria-modal="true" data-graph-target="modal">
+			<div class="modal-content order-modal__content">
+				<div class="order-modal__top">
+					<h2 class="order-modal__title">Оформление заказа</h2>
+				</div>
+				<div class="order-modal__info">
+					<div class="order-modal__quantity order-modal__info-item">Товаров в заказе: <span>3 шт</span></div>
+					<div class="order-modal__summ order-modal__info-item">Общая сумма заказа: <span>568 789 ₽</span></div>
+				</div>
+				<form action="/ticket.php" class="order-modal__form order" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" name="theme" value="Обратный звонок">
+					<input type="hidden" name="admin_email[]" value="klavdiy.tracevsky@gmail.com">
+					<input type="hidden" name="form_subject" value="Заявка с сайта Сайт">
+                    <input type="hidden" name="Товары" value="a">
+                    <input type="hidden" name="url1" value="">
+					<label class="order__label">
+						<span class="order__text">Ваше имя</span>
+						<input type="text" data-validate-field="name" name="Имя" class="order__input input-name" placeholder="Введите имя" autocomplete="off" required>
+					</label>
+					<label class="order__label">
+						<span class="order__text">Номер телефона</span>
+						<input type="tel" data-validate-field="tel" name="Телефон" class="order__input input-tel" placeholder="Введите телефон" autocomplete="off" required>
+					</label>
+					<label class="order__label">
+						<span class="order__text">Ваша почта</span>
+						<input type="mail" data-validate-field="email" name="Email" class="order__input input-mail" placeholder="Введите email" autocomplete="off" required>
+					</label>
+					<button class="order-modal__btn btn">Оформить заказ</button>
+				</form>
+			</div>
+		</div>
+    </div>
+    <footer class="footer">
+        <div class="footer-top flex">
+            <div class="footer-top_logo">
+                <img src="/Images/test.svg">
+            </div>     
+        </div>
+        <div class="footer-content">
+            <div class="footer-adress">
+                <div class="footer-title">Адрес</div>
+                <p>
+                    СНТ "Липки"
+                    улица Сосновая, дом 124
+                </p>
+            </div>
+            <div class="footer-contact">
+                <div class="footer-title">Свяжитесь с нами</div>
+                <p>8 (926) 092-86-00</br>
+                </br>
+                klavdiy.tracevsky@gmail.com</p>
+            </div>
+            <div class="footer-subscribe">
+                <div class="footer-title">Оформив подписку, Вы будете получать самую актуальную информацию о спецпредложениях и скидках нашего интернет-магазина!</div>
+                <form action="/send.php" method="post" class="form">
+                    <input type="hidden" name="url" value="">
+                    <div class="form-group">
+                        <input class="form-input" type="text" name="name" autocomplete="off" placeholder=" " required>
+                        <label for="" class="form-label">Ваше имя</label>                             
+                    </div>
+                    <div class="form-group">
+                        <input class="form-input" type="text" name="email" autocomplete="off" placeholder=" " required>
+                        <label for="" class="form-label">Email</label>                             
+                    </div>
+                    <button class="btn btn-1" type="submit" value="Отправить">
+                        <svg>
+                            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                        </svg>
+                        Подписаться
+                    </button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <div class="footer-title">Полезные ссылки</div>
+                <a href="/Pages/contacts.html" class="footer-link">Контакты</a>
+                <a href="#" class="footer-link">Корзина</a>
+                <a href="/Pages/about.html" class="footer-link">О нас</a>
+                <a href="/Pages/catalog.html" class="footer-link">Каталог</a>
+                <a href="/Pages/collections.html" class="footer-link">Коллекции</a>
+            </div>
+        </div>
+        <div class="footer-bottom flex">
+            <div class="footer-directed">©2022 Rudfield. Created by At-Sky</div>
+            <a class="footer-icon" href="https://wa.me/79260928600"><img src="/Images/icons/23-whatsapp.svg"></a>
+            <a class="footer-icon" href="https://t.me/atsky"><img src="/Images/icons/telegram-plane-svgrepo-com.svg"></a>
+            <a class="footer-icon" href="https://instagram.com/at1sky/"><img src="/Images/icons/38-instagram.svg"></a>
+        </div>
+    </footer>
+    <!-- <script type="module" src="/Scripts/items.js"></script>  -->
+    <script type="module" src="/Scripts/cartAdd.js"></script> 
+    <script type="module" src="/Scripts/cart.js"></script>
+    <script type="module" src="/Scripts/catalog.js"></script>
+    <script type="module" src="/Scripts/search.js"></script>
+    <script src="/libs/modal/modal.js"></script>
+    <script src="/Scripts/burger.js"></script>
+</body>
+</html>

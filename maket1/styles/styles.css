@@ -1,0 +1,51 @@
+@import url(/styles/for_webmasters.css);
+@import url(/styles/for_advertisers.css);
+@import url(/styles/login.css);
+@import url(/styles/registr.css);
+@import url(/styles/reset.css);
+
+* {
+    font-family: 'Gilroy';
+}
+
+@font-face{
+	font-family: 'Gilroy';
+	src: url(/Gilroy/Gilroy-Thin.ttf);
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Gilroy';
+	src: url(/Gilroy/Gilroy-UltraLight.ttf);
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Gilroy';
+	src: url(/Gilroy/Gilroy-Light.ttf);
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Gilroy';
+	src: url(/Gilroy/Gilroy-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Gilroy';
+	src: url(/Gilroy/Gilroy-Bold.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+	src: url(/Gilroy/Gilroy-ExtraBold.ttf);
+	font-weight: 800;
+	font-style: normal;
+}

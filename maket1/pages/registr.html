@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Traffic Shark</title>
+</head>
+<body class="body">
+    <div class="overlay">
+        <div class="modal">
+            <p class="modal__text">
+                Ваша заявка на регистрацию успешно принята.<br>
+                Скоро мы свяжемся с вами!
+            </p>
+            <button onclick="document.location = '/pages/index.html'" class="modal__button">на главную</button>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="#" class="logo"><img src="/images/logo.svg"></a>
+            </div>
+            <nav class="header__navbar">
+                <div class="header__navbar-container">
+                    <a href="for_webmasterts.html" class="header__item header__item_blue">ВЕБМАСТЕРАМ</a>
+                    <a href="index.html" class="header__item header__item_green ">РЕКЛАМОДАТЕЛЯМ</a>
+                    <div class="header__item">
+                        <a href="login.html" class="header__item-button header__item-button_log">ВХОД</a>
+                        <span class="header__item-separator">|</span>
+                        <a href="registr.html" class="header__item-button header__item-button_reg">РЕГИСТРАЦИЯ</a>
+                    </div>
+                    <div class="header__item">
+                        <button class="header__item-button header__item-button_lang">RU</button>
+                        <button class="header__item-button header__item-button_lang">EN</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="about">
+        <div class="about__container about__container_reg">
+            <h1 class="about__title">Регистрация</h1>
+            <form class="about__form about__reg_form">
+                <input class="about__form-input about__form-input_sized" type="text" name="email" autocomplete="off" placeholder="Email">
+                <input class="about__form-input" type="text" name="password" autocomplete="off" placeholder="Пароль">   
+                <input class="about__form-input" type="text" name="email" autocomplete="off" placeholder="Повторите пароль">
+                <input class="about__form-input" type="text" name="password" autocomplete="off" placeholder="Skype"> 
+                <input class="about__form-input" type="text" name="email" autocomplete="off" placeholder="Telegram">
+                <div class="about_checkbox-container">
+                    <h4 class="about__checkbox-title">С чем вы работаете:</h4>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="CPI" id="">                        
+                        <label class="about__label" for="CPI">CPI</label>
+                    </div>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="Gambling" id="">                        
+                        <label class="about__label" for="Gambling">Gambling</label>
+                    </div>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="Betting" id="">                        
+                        <label class="about__label" for="Betting">Betting</label>
+                    </div>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="Crypto" id="">                        
+                        <label class="about__label" for="Crypto">Crypto</label>
+                    </div>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="Datinges" id="">                        
+                        <label class="about__label" for="Datinges">Datinges</label>
+                    </div>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="Sweepstakes" id="">                        
+                        <label class="about__label" for="Sweepstakes">Sweepstakes</label>
+                    </div>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="CC-submits" id="">                        
+                        <label class="about__label" for="CC-submits">CC-submits</label>
+                    </div>
+                    <div class="about__form-group">
+                        <input type="checkbox" class="about__checkbox" name="Other" id="">                        
+                        <label class="about__label" for="Other">Other</label>
+                    </div>
+                </div>
+                <input class="about__form-input about__form-input_sized" type="text" name="password" autocomplete="off" placeholder="Какой трафик вы используете">                                                
+                <button type="submit" class="about__button about__button_pozitioned">зарегистрироваться</button>
+            </form>
+        </div>
+    </section>
+    <script src="/scripts/modal.js"></script>
+</body>
+</html>
+</body>
+</html>

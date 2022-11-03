@@ -1,0 +1,57 @@
+@import url(main.css);
+@import url(catalog.css);
+@import url(cart.css);
+@import url(about.css);
+@import url(contacts.css);
+@import url(collections.css);
+@import url(collectionTab.css);
+@import url(item.css);
+@import url(notification.css);
+@import url(https://kit.fontawesome.com/36639e23d2.js);
+
+@font-face {
+    font-family: 'Georgia';
+    src: url(/font/georgia-2-cufonfonts-webfont/georgia.woff) format("truetype");
+}
+
+@font-face{
+	font-family: 'Circe';
+	src: url(/font/Circe/Circe-Thin.ttf);
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Circe';
+	src: url(/font/Circe/Circe-ExtraLight.ttf);
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Circe';
+	src: url(/font/Circe/Circe-Light.ttf);
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Circe';
+	src: url(/font/Circe/Circe-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Circe';
+	src: url(/font/Circe/Circe-Bold.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+	src: url(/font/Circe/Circe-ExtraBold.ttf);
+	font-weight: 800;
+	font-style: normal;
+}

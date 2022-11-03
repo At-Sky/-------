@@ -1,0 +1,452 @@
+.header__item_active-green::before {
+    background: green;
+}
+
+.about__container_green {
+    background-image: url(/images/bg_green.png);
+    height: 745px;
+}
+
+.suggestions__items-container_small {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: center;
+    padding: 0px 165px;
+    row-gap: 80px;
+}
+
+.suggestions__item_size {
+    width: calc(100% / 3);
+}
+
+/* ways */
+
+.ways__title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.ways__text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #939393;
+}
+
+.ways__items-container {
+    padding: 0 165px;
+    margin: 80px 0;
+}
+
+.ways__item {
+    padding: 60px 60px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.ways__item-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 75px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2E9ADB;
+}
+
+.ways__item-text {
+    margin-top: 20px;
+    font-family: 'Gilroy';
+    padding: 0 191px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #939393;
+}
+
+.ways__item-header {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.ways__dropdown-line{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background-image: url(/images/ways/line.svg);
+    background-position: calc(50% - 3px);
+    background-size: cover;
+}
+
+.ways__dropdown-arrow {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* dropdown */
+
+.ways__dropdown-block {
+    display: none;
+    margin-top: 40px;
+}
+
+.ways__dropdown-text {
+    margin-top: 60px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #939393;
+}
+
+.ways__dropdown-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;    
+}
+
+.ways__formats-container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.ways__space-line {
+    width: 100%;
+    margin: 60px auto;
+}
+
+.ways__format-card_pos {
+    grid-column-start: 2;
+}
+
+.ways__format-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 40px 0 30px 0;
+    row-gap: 21px;
+}
+
+.ways__card-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #939393;    
+}
+
+.ways__card-icon {
+    height: 64px;
+}
+
+.ways_space-line {
+    width: 100%;
+    margin-top: 60px;
+}
+
+/* cases cards */
+
+.ways__dropdown-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.ways__cases-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ways__case-card {
+    margin-top: 60px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    display: flex;
+}
+
+.ways__case-icon {
+    margin-top: 60px;
+    max-width: min-content;
+    align-self: center;
+}
+
+.ways__icon-name {
+    margin-top: 15px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+}
+
+.ways__case-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 68px 0;
+    width: calc(100% / 3 - 1px);
+    row-gap: 20px;
+}
+
+.ways__case-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #939393;    
+}
+
+.ways__case-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;    
+}
+
+.ways__case-title_blue {
+    color: #2E9ADB;
+}
+
+.ways__case-item:not(:last-child) {
+    border-right: 1px solid #EBEBEB;
+}
+
+/* benefits */
+
+.ways__benefits-list {
+    list-style-type: none;
+    margin-top: 60px;
+}
+
+.ways__benefits-item {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 48px;
+    color: #000000;
+    padding-left: 68px;
+    background-image: url(/images/ways/check-mark\(3\)\ 1.svg);
+    background-position: left center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+}
+
+.ways__benefits-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.ways__callback-btn {
+    text-decoration: none;
+    align-self: center;
+    margin-top: 60px;
+    padding: 28px 100px;
+    background: #FFFFFF;
+    border: 4px solid #2E9ADB;
+    border-radius: 40px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2E9ADB;
+}
+
+/* apps */
+
+.ways__icon-name {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #939393;
+}
+
+.ways__card-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.ways__apps-container {
+    display: flex;
+    margin-top: 60px;
+    column-gap: 30px;
+    flex: 1;
+}
+
+.ways__app-card {
+    width: 50%;
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.ways__icon-info {
+    padding: 40px 60px;
+    border-right: 1px solid #EBEBEB;
+}
+
+.ways__card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    row-gap: 20px;
+}
+
+/* prodcuts */
+
+.ways__products-container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.ways__products-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 30px 0;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.ways__products-card_android::before {
+    content: url(/images/ways/products/ico1.svg);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.ways__products-card_ios::before {
+    content: url(/images/ways/products/ico2.svg);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+/* technologies */
+
+.ways__technologies-card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+    padding: 40px 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.ways__technologies-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+}
+
+/* achievements */
+
+.ways__achievements-text {
+    margin-top: 40px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+}
+
+/* trend */
+
+.trend__title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.trend__text {
+    margin-top: 40px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #939393;
+    margin-bottom: 80px;
+}
+
+.trend__text_blue {
+    color: #2E9ADB;
+}

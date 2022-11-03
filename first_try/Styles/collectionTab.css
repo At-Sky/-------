@@ -1,0 +1,75 @@
+.collection-info {
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rosa-ab-origine {
+    background: url(/Images/slider/collection1.jpg) #e0e0e0 no-repeat right center;
+    background-size: cover;
+}
+
+.lavender {
+    background: url(/Images/slider/collection2.jpg) #e0e0e0 no-repeat right center;
+    background-size: contain;
+}
+
+.anti-stress {
+    background: url(/Images/slider/collection3.jpg) #e0e0e0 no-repeat right center;
+    background-size: contain;
+}
+
+.essential-oil {
+    background: url(/Images/slider/collection4.jpg) #e0e0e0 no-repeat right center;
+    background-size: contain;
+}
+
+.pre-title {
+    font-size: 28px;
+    padding: 40px 20px 0 30px;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+.collection-page_title {
+    padding: 0 20px 20px 30px;
+    font-size: 30px;
+    line-height: 1.2em;
+}
+
+.collection-page_text {
+    padding: 30px;
+    font-size: 17px;
+}
+
+.main-text {
+    margin-top: 20px;
+    font-size: normal;
+    line-height: 1.8em;
+    text-align: justify;
+}
+
+.collection-items {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(100% / 5), 1fr));
+    gap: 10px;
+}
+
+@media (max-width: 1300px) {
+    .collection-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .collection-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .collection-items {
+        grid-template-columns: 1fr;
+    }
+}

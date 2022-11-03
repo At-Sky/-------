@@ -1,0 +1,122 @@
+.section_content {
+    padding-top: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 1.6em;
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .section_content {
+        gap: 30px;
+    }
+}
+
+/* .section_text {
+    margin-top: 10px;
+} */
+
+.section_text:first-child {
+    width: 25%;
+}
+
+@media (max-width: 800px) {
+    .section_text {
+        width: 100%;
+    }
+
+    .section_text:first-child {
+        width: 50%;
+    }
+}
+
+.space {
+    height: 30px;
+}
+
+.content-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.7em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.section-icon img{
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.section-icon img path {
+    fill: #2c3837;
+}
+
+.section-icon:not(:first-child) {
+    padding-left: 10px;
+}
+
+.section-form {
+    width: 300px;
+    padding: 32px 0;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.form-group > textarea {
+    height: 80px;
+}
+
+.form-group > textarea::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+
+/* map */
+
+#map-container {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    background-color: transparent;
+}
+
+[class*="gotoymaps"], [class*="gototaxi"], [class*="gototech"] {
+    display: none !important;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+
+.adress {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 20%;
+    height: 40%;
+    background-color: white;
+    z-index: 100;
+    flex-direction: column;
+    padding: 3% 3% 2% 3%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+@media (max-width: 800px) {
+    .adress {
+        width: 40%;
+    }
+}
+
+.adress > img {
+    align-self: center;
+    width: 70%;
+}
+
+.adress > p {
+    margin-top: auto;
+    text-align: center;
+    line-height: 1.5em;
+}

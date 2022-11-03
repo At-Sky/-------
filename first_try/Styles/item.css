@@ -1,0 +1,150 @@
+.item-info_container {
+    display: grid;
+    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        'image name'
+        'image description'
+        'image composition';
+}
+
+@media (max-width: 1040px) {
+    .item-info_container {
+        display: block;
+    }
+}
+
+.item-info_img {
+    grid-area: image;
+    justify-self: center;
+    align-self: center;
+}
+
+@media (max-width: 540px) {
+    .item-info_img {
+        max-width: 300px;
+    }
+}
+
+.item-info_name {
+    grid-area: name;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 0 10px 10px;
+    /* text-align: center; */
+}
+
+@media (max-width: 700px) {
+    .item-info_name {
+        font-size: 1.6rem;
+        /* word-wrap: break-word; */
+    }
+}
+
+.item-info_description {
+    border-top: 1px solid #2c383740;
+    border-left: 1px solid #2c383740;
+    border-right: 1px solid #2c383740;
+    padding: 10px;
+    grid-area: description;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        'size size'
+        'art art'
+        'price button'
+        'about about';
+}
+
+.item-info_size {
+    grid-area: size;
+    font-size: 20px;
+}
+
+.item-info_articul {
+    margin-top: 5px;
+    grid-area: art;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.item-info_price {
+    margin-top: 30px;
+    grid-area: price;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-info_button {
+    grid-area: button; 
+    padding: 10px;
+    font-size: 18px;
+    align-self: flex-end;
+    text-align: center;
+    cursor: pointer;
+    background-color: #c7c6c6;
+    color: white;
+}
+
+.item-info_about {
+    margin-top: 50px;
+    grid-area: about; 
+    font-size: 15px;
+}
+
+.about-addition {
+    line-height: 1.6rem;
+}
+
+.item-info_composition {
+    border-top: 1px solid #2c383740;
+    grid-area: composition;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        'usage active'
+        'ingredients ingredients';
+}
+
+.item-info_composition p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.item-info_usage {
+    grid-area: usage;
+    border-left: 1px solid #2c383740;
+    padding: 10px;
+
+}
+
+.item-info_active {
+    grid-area: active;
+    border-left: 1px solid #2c383740;
+    border-right: 1px solid #2c383740;
+    padding: 10px;
+}
+
+.item-info_ingredients {
+    padding: 10px;
+    grid-area: ingredients;
+    border: 1px solid #2c383740;
+}
+
+/* .item-info_review {
+    margin-top: 10px;
+    border-top: 1px solid #2c383740;
+    grid-area: review;
+} 
+
+.item-info_review > p {
+    padding: 100px;
+    text-align: center;
+} */
