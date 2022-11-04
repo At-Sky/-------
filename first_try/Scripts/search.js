@@ -1,4 +1,4 @@
-import {CatalogList} from '/Scripts/data.js';
+import {CatalogList} from '/first_try/Scripts/data.js';
 
 
 let list;

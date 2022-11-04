@@ -8,7 +8,7 @@ function init(){
 
     let placemark = new ymaps.Placemark(mainPlace, {}, {
         iconLayout: 'default#image',
-        iconImageHref: '/Images/icons/map-marker-svgrepo-com.svg',
+        iconImageHref: '/first_try/Images/icons/map-marker-svgrepo-com.svg',
         iconImageSize: [40, 40],
         iconImageOffset: [-21, -35]
     });

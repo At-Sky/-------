@@ -1,5 +1,5 @@
-import {CatalogList} from '/Scripts/data.js';
-import {cartCounter, cartUpdate} from '/Scripts/cartAdd.js';
+import {CatalogList} from '/first_try/Scripts/data.js';
+import {cartCounter, cartUpdate} from '/first_try/Scripts/cartAdd.js';
 //cart
 const cart = document.querySelector('.cart');
 const cartPlace = document.querySelector('.cart-place');

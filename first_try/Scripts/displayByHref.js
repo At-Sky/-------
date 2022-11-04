@@ -1,5 +1,5 @@
-import {CatalogList, _MoreAboutItems} from '/Scripts/data.js';
-import {cartCounter, addFromItems} from '/Scripts/cartAdd.js';
+import {CatalogList, _MoreAboutItems} from '/first_try/Scripts/data.js';
+import {cartCounter, addFromItems} from '/first_try/Scripts/cartAdd.js';
 
 const currentItem = document.querySelector('.current_item');
 const img = document.querySelector('.item-info_img');

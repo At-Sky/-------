@@ -1,5 +1,5 @@
-import {addFromCollections} from '/Scripts/cartAdd.js';
-import {CatalogList} from '/Scripts/data.js';
+import {addFromCollections} from '/first_try/Scripts/cartAdd.js';
+import {CatalogList} from '/first_try/Scripts/data.js';
 
 const collectionItems = document.querySelector('.collection-items');
 const collectionInfo = document.querySelector('.collection-info');
