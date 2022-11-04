@@ -242,7 +242,7 @@
     position: absolute;
     top: 6%;
     left: 16%;
-    background: url(/Images/face.webp) no-repeat left;
+    background: url(/first_try/Images/face.webp) no-repeat left;
     background-size: cover;
     transition: filter .5s;
 }
@@ -441,17 +441,17 @@
 }
 
 .slider-item:nth-child(3n+1) {
-    background: #e0e0e0 url(/Images/slider/collection1.jpg) no-repeat right bottom;
+    background: #e0e0e0 url(/first_try/Images/slider/collection1.jpg) no-repeat right bottom;
     background-size: cover;
 }
 
 .slider-item:nth-child(3n+2) {
-    background: #e0e0e0 url(/Images/slider/collection2.jpg) no-repeat right bottom;
+    background: #e0e0e0 url(/first_try/Images/slider/collection2.jpg) no-repeat right bottom;
     background-size: contain;
 }
 
 .slider-item:nth-child(3n+3) {
-    background: #e0e0e0 url(/Images/slider/collection3.jpg) no-repeat right bottom;
+    background: #e0e0e0 url(/first_try/Images/slider/collection3.jpg) no-repeat right bottom;
     background-size: contain;
 }
 

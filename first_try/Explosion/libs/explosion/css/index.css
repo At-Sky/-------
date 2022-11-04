@@ -112,7 +112,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80%;
-    background-image: url('/Explosion/libs/explosion/images/close.svg');
+    background-image: url('/first_try/Explosion/libs/explosion/images/close.svg');
     cursor: pointer;
 }
 
@@ -146,20 +146,20 @@
 }
 
 .explosionNavPrev {
-    background-image: url(/Explosion/libs/explosion/images/arrow-up.svg);
+    background-image: url(/first_try/Explosion/libs/explosion/images/arrow-up.svg);
 }
 
 .explosionNavPrev:hover {
-    background-image: url(/Explosion/libs/explosion/images/arrow-up-white.svg);
+    background-image: url(/first_try/Explosion/libs/explosion/images/arrow-up-white.svg);
 }
 
 
 .explosionNavNext {
-    background-image: url(/Explosion/libs/explosion/images/arrow-down.svg);
+    background-image: url(/first_try/Explosion/libs/explosion/images/arrow-down.svg);
 }
 
 .explosionNavNext:hover {
-    background-image: url(/Explosion/libs/explosion/images/arrow-down-white.svg);
+    background-image: url(/first_try/Explosion/libs/explosion/images/arrow-down-white.svg);
 }
 
 .explosionCounter {

@@ -36,21 +36,21 @@
 }
 
 .collection-item:nth-child(1) {
-    background: url(/Images/slider/collection1.jpg) no-repeat right center;
+    background: url(/first_try/Images/slider/collection1.jpg) no-repeat right center;
     background-size: cover;
 }
 
 .collection-item:nth-child(2) {
-    background: url(/Images/slider/collection2.jpg) no-repeat right center;
+    background: url(/first_try/Images/slider/collection2.jpg) no-repeat right center;
     background-size: cover;
 }
 
 .collection-item:nth-child(3) {
-    background: url(/Images/slider/collection3.jpg) no-repeat right center;
+    background: url(/first_try/Images/slider/collection3.jpg) no-repeat right center;
     background-size: cover;
 }
 
 .collection-item:nth-child(4) {
-    background: url(/Images/slider/collection4.jpg) no-repeat right center;
+    background: url(/first_try/Images/slider/collection4.jpg) no-repeat right center;
     background-size: cover;
 }

@@ -536,7 +536,7 @@
     width: 20px;
     height: 20px;
     margin: 0 5px;
-    background: url(/Explosion/libs/explosion/images/arrow-up.svg) no-repeat center center;
+    background: url(/first_try/Explosion/libs/explosion/images/arrow-up.svg) no-repeat center center;
     transform: rotate(90deg);
     background-size: contain;
 }
