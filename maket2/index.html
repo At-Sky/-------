@@ -4,81 +4,219 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Styles/main.css">
-    <title>ClickPlace</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="container">
-        <img src="/Images/logo_white.svg">
-    </div>
-    <header class="header flex">
-        <ul class="header__registration flex">
-            <li class="header__registration-item"><button class="registration-item__button registration-item__button_white">Зарегистрировать объект</button></li>
-            <li class="header__registration-item"><button class="registration-item__button">Зарегистрироваться</button></li>
-            <li class="header__registration-item"><button class="registration-item__button">Войти в аккаунт</button></li>
-            <li class="header__registration-item">
-                <button class="registration-item__burger flex">
-                    <div class="burger-bar"></div>
-                    <div class="burger-bar"></div>
-                    <div class="burger-bar"></div>
-                </button>
-            </li>
-            <li class="header__registration-item"><button class="registration-item__search flex"><img src="/Images/search.svg" alt=""></button></li>
-        </ul>
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__nav nav">
+                <a href="#" class="nav__item nav__item_logo nav__item_highlited">Atelier.</a>
+                <a href="#" class="nav__item nav__item_highlited">Overview</a>
+                <a href="#" class="nav__item">Pages</a>
+                <a href="#" class="nav__item">Portfolio</a>
+                <a href="#" class="nav__item">Template</a>
+                <a href="#" class="nav__item">Contact</a>
+            </nav>
+            <button class="header__button">
+                Buy Template
+            </button>
+        </div>
     </header>
-    <section class="section">
-        <h1 class="section__title">
-            Click Place
-            <img class="secion__title__arrow" src="/Images/arrow.svg" alt="">
-            <img class="secion__title__dotted-line" src="/Images/dotted-line.svg" alt="">
-        </h1>
-        <p class="section__about">>100 идей для отдыха в одном месте</p>
-        <p class="section__about-text">
-            Любите путешествовать по своей стране? Вам точно сюда! 
-            Здесь можно забронировать жильё быстро, в один <a href="" class="section__about-text_link">клик</a>. Но не только это, наша 
-            платформа универсальна: найти, где жить, вкусно поесть и интересно отдохнуть
-            можно в одном месте.
-        </p>
-        <div class="section__choosе-list flex">
-            <div class="choose-list__item">
-                <div class="choose-list__item_icon flex">
-                    <img src="/Images/place.svg" alt="">
+    <main class="main">
+        <div class="main__container">
+            <section class="main__poster poster">
+                <p class="poster__description">WE ARE Atelier Creative Agency</p>
+                <h1 class="poster__title">Unique UI Kit Template for Creative Agencies</h1>
+                <button class="poster__button">VIEW LAYOUTS</button>
+            </section>
+            <section class="portfolio">
+                <div class="portfolio__container">
+                    <p class="portfolio__sup-title">Our Core Layouts</p>
+                    <h2 class="portfolio__title">Template Pages</h2>
+                    <div class="cases">
+                        <div class="cases__container">
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE.svg" alt="" class="card__img">
+                                <h3 class="card__title">Landing vr.1</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-1.svg" alt="" class="card__img">
+                                <h3 class="card__title">Landing vr.2</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-2.svg" alt="" class="card__img">
+                                <h3 class="card__title">Landing vr.3</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-3.svg" alt="" class="card__img">
+                                <h3 class="card__title">Portfolio 1</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-4.svg" alt="" class="card__img">
+                                <h3 class="card__title">Portfolio 1</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-5.svg" alt="" class="card__img">
+                                <h3 class="card__title">Portfolio 1</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-6.svg" alt="" class="card__img">
+                                <h3 class="card__title">Portfolio 1</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-7.svg" alt="" class="card__img">
+                                <h3 class="card__title">Single Project</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-8.svg" alt="" class="card__img">
+                                <h3 class="card__title">About Company</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-9.svg" alt="" class="card__img">
+                                <h3 class="card__title">About TEam</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-10.svg" alt="" class="card__img">
+                                <h3 class="card__title">Single Team Member</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-11.svg" alt="" class="card__img">
+                                <h3 class="card__title">FAQ PAge</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-12.svg" alt="" class="card__img">
+                                <h3 class="card__title">Contact Us</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-13.svg" alt="" class="card__img">
+                                <h3 class="card__title">Blog 1</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-14.svg" alt="" class="card__img">
+                                <h3 class="card__title">Blog 2</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-15.svg" alt="" class="card__img">
+                                <h3 class="card__title">Blog 3</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-16.svg" alt="" class="card__img">
+                                <h3 class="card__title">Blog Categories</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-17.svg" alt="" class="card__img">
+                                <h3 class="card__title">Single Blog</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-18.svg" alt="" class="card__img">
+                                <h3 class="card__title">Pricing</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-19.svg" alt="" class="card__img">
+                                <h3 class="card__title">Style guide</h3>
+                            </div>
+                            <div class="cases__card card">
+                                <img src="./images/IMAGE-20.svg" alt="" class="card__img">
+                                <h3 class="card__title">Licenses</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="choose-list__item_title">Место</div>
-                <div class="choose-list__item_text">Куда вы направляетесь?</div>
-            </div>
-            <div class="choose-list__item">
-                <div class="choose-list__item_icon flex">
-                    <img src="/Images/date.svg" alt="">
+            </section>
+            <section class="portfolio">
+                <img src="./images/IMAGEserv.png" alt="" class="portfolio__img">
+                <div class="portfolio__container">
+                    <p class="portfolio__sup-title">Our Core Features</p>
+                    <h2 class="portfolio__title">Our Services</h2>
+                    <div class="services">
+                        <div class="services__container">
+                            <div class="services__card card">
+                                <img src="./images/IMAGEic-1.svg" alt="" class="card__icon">
+                                <h3 class="card__title-highlited">Web Design</h3>
+                                <p class="card__text">
+                                    Suspendisse varius enim in<br>
+                                    cursus id rutrum imperdiet.<br>
+                                    eros elementum tristique.
+                                </p>
+                            </div>
+                            <div class="services__card card">
+                                <img src="./images/IMAGEic-2.svg" alt="" class="card__icon">
+                                <h3 class="card__title-highlited">UI/UX Design</h3>
+                                <p class="card__text">
+                                    Suspendisse varius enim in<br>
+                                    cursus id rutrum imperdiet.<br>
+                                    eros elementum tristique.
+                                </p>
+                            </div>
+                            <div class="services__card card">
+                                <img src="./images/IMAGEic-3.svg" alt="" class="card__icon">
+                                <h3 class="card__title-highlited">SEO & Marketing</h3>
+                                <p class="card__text">
+                                    Suspendisse varius enim in<br>
+                                    cursus id rutrum imperdiet.<br>
+                                    eros elementum tristique.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="choose-list__item_title">Дата</div>
-                <div class="choose-list__item_text">Когда начнется ваш отдых?</div>
-            </div>
-            <div class="choose-list__item">
-                <div class="choose-list__item_icon flex">
-                    <img src="/Images/guests.svg" alt="">
+            </section>
+            <section class="inst">
+                <div class="inst__container">
+                    <hr></hr>
+                    <div class="inst__img-container">
+                        <div class="inst__help">
+                            <img src="./images/inst/IMAGEi-1.png" alt="" class="inst__image">                            
+                        </div>
+                        <div class="inst__help">
+                            <img src="./images/inst/IMAGEi-2.png" alt="" class="inst__image">                            
+                        </div>
+                        <div class="inst__follow">
+                            <p>Follow me on</p>
+                        </div>
+                        <div class="inst__help">
+                            <img src="./images/inst/IMAGEi-3.png" alt="" class="inst__image">                            
+                        </div>
+                        <div class="inst__help">
+                            <img src="./images/inst/IMAGEi-4.png" alt="" class="inst__image">                            
+                        </div>
+                    </div>
                 </div>
-                <div class="choose-list__item_title">Гости</div>
-                <div class="choose-list__item_text">С кем вы отправитесь?</div>
-            </div>
+            </section>
+            <section class="follow">
+                <div class="follow__container">
+                    <h2 class="follow__title">Subscribe to Atelier<br> Newsletter</h2>
+                    <p class="follow__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+
+                    <form action="submit" class="follow__form">
+                        <input type="text" class="follow__input">
+                        <button type="submit" class="follow__button">Subscribe</button>
+                    </form>
+                    <p class="follow__text">
+                        * By clicking <span class="highlited">"Subscribe"</span> button, you agree to our 
+                        Terms and that you have read our <a href="#" class="highlited">Data Use Policy.</a>
+                    </p>
+                    <div class="follow__socials">
+                        <img src="./images/IMAGEsocials.svg" alt="" class="follow__icon">
+                        <img src="./images/IMAGEsocials-1.svg" alt="" class="follow__icon">
+                        <img src="./images/IMAGEsocials-2.svg" alt="" class="follow__icon">
+                        <img src="./images/IMAGEsocials-3.svg" alt="" class="follow__icon">
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <hr>
+                <div class="footer__container">
+                    <p class="footer__text">Powered by<span class="highlited">Webflow</span></p>
+                    <div class="footer__links">
+                        <a href="" class="footer__link">Licenses</a>
+                        <a href="" class="footer__link">Style Guide</a>
+                        <a href="" class="footer__link">Instruction</a>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <button class="check-price-container__button">Забронировать</button>
-    </section>
-    <footer class="footer flex">
-        <div class="footer__dotted-line"></div>
-        <div class="footer__socials-container flex">
-            <button class="footer__socials-container__button">
-                <img src="/Images/telegram.svg" alt="" class="footer__socials-container__button__svg">
-            </button>
-            <button class="footer__socials-container__button">
-                <img src="/Images/vk.svg" alt="" class="footer__socials-container__button__svg">
-            </button>
-            <button class="footer__socials-container__button">
-                <img src="/Images/phone.svg" alt="" class="footer__socials-container__button__svg">
-            </button>
-        </div>
-    </footer>
-    <script src="/Scripts/burger.js"></script>
+    </main>
 </body>
 </html>

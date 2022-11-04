@@ -1,46 +1,488 @@
-@import url(/Styles/index.css);
-
-
-
-
-@font-face{
-	font-family: 'Montserrat';
-	src: url(/Fonts/Montserrat/Montserrat-Thin.ttf);
-	font-weight: 100;
-	font-style: normal;
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
 }
 
-@font-face{
-	font-family: 'Montserrat';
-	src: url(/Fonts/Montserrat/Montserrat-ExtraLight.ttf);
-	font-weight: 200;
-	font-style: normal;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@font-face{
-	font-family: 'Montserrat';
-	src: url(/Fonts/Montserrat/Montserrat-Light.ttf);
-	font-weight: 300;
-	font-style: normal;
+:focus,
+:active {
+  outline: none;
 }
 
-@font-face{
-	font-family: 'Montserrat';
-	src: url(/Fonts/Montserrat/Montserrat-Regular.ttf);
-	font-weight: normal;
-	font-style: normal;
+a:focus,
+a:active {
+  outline: none;
 }
 
-@font-face{
-	font-family: 'Montserrat';
-	src: url(/Fonts/Montserrat/Montserrat-Bold.ttf);
-	font-weight: bold;
-	font-style: normal;
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-	src: url(/Fonts/Montserrat/Montserrat-ExtraBold.ttf);
-	font-weight: 800;
-	font-style: normal;
+  font-family: "Old Standard TT";
+  src: url(../font/OldStandardTT-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
 }
+@font-face {
+  font-family: "Old Standard TT";
+  src: url(../font/OldStandardTT-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Old Standard TT";
+  src: url(../font/OldStandardTT-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background-color: #181511;
+  color: #ACA592;
+}
+
+.header__container {
+  padding: 14px calc(0px + 120 * ((100vw - 320px) / 1120));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .header__container {
+    flex-wrap: wrap;
+  }
+}
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media (max-width: 720px) {
+  .header__nav {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 10px;
+  }
+}
+.header__button {
+  border: 1px solid #FFAE2B;
+  padding: 15px 25px;
+  color: #FFAE2B;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  justify-self: center;
+  font-size: calc(8px + 3 * ((100vw - 320px) / 1120));
+  line-height: 22px;
+  /* identical to box height, or 200% */
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .header__button {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .header__button {
+    margin-top: 15px;
+  }
+}
+
+.nav__item {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(8px + 3 * ((100vw - 320px) / 1120));
+  line-height: 24px;
+  /* identical to box height, or 218% */
+  text-transform: uppercase;
+  color: #ACA592;
+}
+.nav__item_logo {
+  font-size: 22px;
+  font-size: calc(18px + 4 * ((100vw - 320px) / 1120));
+  line-height: 28px;
+  text-transform: capitalize;
+}
+.nav__item_highlited {
+  color: #FFAE2B;
+}
+
+.main__poster {
+  width: 100%;
+  padding: 120px calc(0px + 100 * ((100vw - 320px) / 1120)) 200px calc(0px + 100 * ((100vw - 320px) / 1120));
+  text-align: center;
+  background-image: url(../images/IMAGE.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.poster__description {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(10px + 2 * ((100vw - 320px) / 1120));
+  line-height: 22px;
+  margin-bottom: 15px;
+  /* identical to box height, or 183% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFAE2B;
+}
+.poster__title {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
+  line-height: 80px;
+  margin-bottom: 35px;
+  /* or 114% */
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+.poster__button {
+  padding: 14px 25px;
+  background: #FFAE2B;
+  border-radius: 0px;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 22px;
+  /* identical to box height, or 200% */
+  text-transform: uppercase;
+  color: #181511;
+}
+
+.portfolio__img {
+  width: 100%;
+  padding-top: 120px;
+}
+.portfolio__container {
+  padding: 120px calc(0px + 120 * ((100vw - 320px) / 1120)) 0px calc(0px + 120 * ((100vw - 320px) / 1120));
+  text-align: center;
+}
+.portfolio__title {
+  margin-bottom: 60px;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(25px + 35 * ((100vw - 320px) / 1120));
+  line-height: 70px;
+  /* identical to box height, or 117% */
+  color: #FFAE2B;
+}
+.portfolio__sup-title {
+  margin-bottom: 10px;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(10px + 2 * ((100vw - 320px) / 1120));
+  line-height: 22px;
+  /* identical to box height, or 183% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cases__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 480px) {
+  .cases__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.cases__card {
+  border: 1px solid #4B4136;
+  border-radius: 0px;
+  padding: 26px 0 41px 0;
+}
+
+.card__title {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(11px + 2 * ((100vw - 320px) / 1120));
+  line-height: 23px;
+  /* identical to box height, or 177% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.card__title-highlited {
+  margin: 20px 0 10px 0;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(20px + 9 * ((100vw - 320px) / 1120));
+  line-height: 40px;
+  /* identical to box height, or 138% */
+  color: #FFAE2B;
+}
+.card__text {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(13px + 2 * ((100vw - 320px) / 1120));
+  line-height: 26px;
+  /* identical to box height, or 173% */
+}
+
+.services__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px calc(0px + 120 * ((100vw - 320px) / 1120)) 200px calc(0px + 120 * ((100vw - 320px) / 1120));
+}
+@media (max-width: 768px) {
+  .services__container {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.inst__container {
+  padding: 0px calc(0px + 120 * ((100vw - 320px) / 1120));
+}
+.inst__img-container {
+  display: flex;
+  gap: 1px;
+}
+.inst hr {
+  background-color: #ACA592;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 20px;
+}
+.inst__follow {
+  background-image: url(../images/inst/IMAGEinst.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  flex-grow: 1;
+  background-position: center center;
+  padding: 40px 0 61px 0;
+  position: relative;
+}
+.inst__follow p {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(30px + 10 * ((100vw - 320px) / 1120));
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  /* identical to box height, or 125% */
+  color: #FFAE2B;
+}
+.inst__follow::before {
+  content: url(../images/inst/FrameInst.svg);
+  position: absolute;
+  left: calc(50% - 61px);
+  bottom: 30px;
+  z-index: -1;
+}
+.inst__help {
+  position: relative;
+}
+.inst__help::before {
+  content: url(../images/inst/IMAGEinst.svg);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -35px;
+  left: calc(50% - 25px);
+}
+
+.follow__container {
+  padding: 146px calc(0px + 120 * ((100vw - 320px) / 1120)) 43px calc(0px + 120 * ((100vw - 320px) / 1120));
+  text-align: center;
+}
+.follow__title {
+  margin-bottom: 20px;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(25px + 35 * ((100vw - 320px) / 1120));
+  line-height: 70px;
+  /* or 117% */
+  text-align: center;
+  color: #FFAE2B;
+}
+.follow__text {
+  margin-top: 20px;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(10px + 2 * ((100vw - 320px) / 1120));
+  line-height: 28px;
+  /* identical to box height, or 233% */
+}
+.follow__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 510px;
+  margin: 80px auto 30px auto;
+}
+.follow__input {
+  padding: 10px 10px;
+  border: 1px solid #4b4136;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(11px + 3 * ((100vw - 320px) / 1120));
+  line-height: 20px;
+  /* identical to box height, or 143% */
+}
+.follow__button {
+  padding: 10px 10px;
+  background-color: #FFAE2B;
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(11px + 3 * ((100vw - 320px) / 1120));
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-align: center;
+  color: #181511;
+}
+.follow__socials {
+  margin-top: 40px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.follow__icon {
+  padding: 14px;
+  border: 1px solid #4B4136;
+}
+
+.footer hr {
+  width: calc(100% - 240px);
+  margin: 0 auto;
+  height: 1px;
+  background-color: #4B4136;
+}
+@media (max-width: 768px) {
+  .footer hr {
+    width: 80%;
+  }
+}
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px calc(0px + 120 * ((100vw - 320px) / 1120));
+}
+.footer__links {
+  display: flex;
+  gap: 8px;
+}
+.footer__link {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 20px;
+  /* identical to box height, or 273% */
+  color: #FFAE2B;
+}
+.footer__link:not(:first-child) {
+  border-left: 1px solid #4B4136;
+  padding-left: 8px;
+}
+.footer__text {
+  font-family: "Old Standard TT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(10px + 2 * ((100vw - 320px) / 1120));
+  line-height: 22px;
+}
+
+.highlited {
+  color: #FFAE2B;
+}/*# sourceMappingURL=main.css.map */
