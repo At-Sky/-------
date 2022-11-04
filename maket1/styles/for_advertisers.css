@@ -3,7 +3,7 @@
 }
 
 .about__container_green {
-    background-image: url(/first_try/images/bg_green.png);
+    background-image: url(/maket1/images/bg_green.png);
     height: 745px;
 }
 
@@ -87,7 +87,7 @@
     height: 100px;
     width: 100%;
     position: relative;
-    background-image: url(/first_try/images/ways/line.svg);
+    background-image: url(/maket1/images/ways/line.svg);
     background-position: calc(50% - 3px);
     background-size: cover;
 }
@@ -269,7 +269,7 @@
     line-height: 48px;
     color: #000000;
     padding-left: 68px;
-    background-image: url(/first_try/images/ways/check-mark\(3\)\ 1.svg);
+    background-image: url(/maket1/images/ways/check-mark\(3\)\ 1.svg);
     background-position: left center;
     background-size: 48px 48px;
     background-repeat: no-repeat;
@@ -370,14 +370,14 @@
 }
 
 .ways__products-card_android::before {
-    content: url(/first_try/images/ways/products/ico1.svg);
+    content: url(/maket1/images/ways/products/ico1.svg);
     position: absolute;
     top: 16px;
     right: 16px;
 }
 
 .ways__products-card_ios::before {
-    content: url(/first_try/images/ways/products/ico2.svg);
+    content: url(/maket1/images/ways/products/ico2.svg);
     position: absolute;
     top: 16px;
     right: 16px;

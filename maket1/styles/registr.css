@@ -67,7 +67,7 @@
 }
 
 .modal__button::before {
-    content: url(/first_try/images/Vector.svg);
+    content: url(/maket1/images/Vector.svg);
     position: absolute;
     top: calc(50% - 10px);
     right: 40px;
@@ -82,7 +82,7 @@
     align-items: center;
     padding-top: 154px;
     height: 820px;
-    background-image: url(/first_try/images/up_bg.png);
+    background-image: url(/maket1/images/up_bg.png);
     background-size: cover;
     overflow: hidden;
     padding-bottom: 155px;
@@ -96,7 +96,7 @@
     right: 60px;
     width: calc(100% - 120px);
     height: 60%;
-    background-image: url(/first_try/images/dots.svg);
+    background-image: url(/maket1/images/dots.svg);
     background-size: contain;
 }
 
