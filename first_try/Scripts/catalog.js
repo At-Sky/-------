@@ -1,6 +1,6 @@
-import {CatalogList} from '/Scripts/data.js';
-import {addToCart} from '/Scripts/cartAdd.js';
-import { displayCartCounter } from '/Scripts/cartAdd.js';
+import {CatalogList} from '/first_try/Scripts/data.js';
+import {addToCart} from '/first_try/Scripts/cartAdd.js';
+import { displayCartCounter } from '/first_try/Scripts/cartAdd.js';
 
 //catalog
 
