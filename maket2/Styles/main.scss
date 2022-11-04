@@ -1,0 +1,453 @@
+@import '_reset';
+@import '_font';
+// @use "sass:math";
+
+
+$highlited: #FFAE2B;
+$main-dark: #181511;
+$main-text: #ACA592;
+
+$maxWidth: 1440;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-paddings($top, $bottom, $pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+    $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    
+    @if ($top == $bottom) {
+        padding: #{$top + px} $result;
+    } @else {
+        padding: #{$top + px} $result #{$bottom + px} $result;
+    }
+}
+
+
+//320 480 768 1024 
+
+body {
+    background-color: $main-dark;
+    color: $main-text;
+}
+
+.header {
+    &__container {
+        // padding: 14px 120px;
+        @include adaptiv-paddings(14, 14, 120, 0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 720px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        @media (max-width: 720px) {
+            column-gap: 30px;
+            row-gap: 10px;
+        }
+    }
+    &__button {
+        border: 1px solid $highlited;
+        padding: 15px 25px;
+        color: $highlited;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        justify-self: center;
+        //font-size: 11px;
+        @include adaptiv-font(11, 8);
+        line-height: 22px;
+        /* identical to box height, or 200% */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+            padding: 10px 15px;
+        }
+
+        @media (max-width: 600px) {
+            margin-top: 15px;
+        }
+    }
+}
+
+.nav {
+    &__item {
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 11px;
+        @include adaptiv-font(11, 8);
+        line-height: 24px;
+        /* identical to box height, or 218% */
+        text-transform: uppercase;
+
+        color: $main-text;
+
+        &_logo {
+            font-size: 22px;
+            @include adaptiv-font(22, 18);
+            line-height: 28px;
+            text-transform: capitalize;
+        }
+
+        &_highlited {
+            color: $highlited;            
+        }
+    }
+}
+
+.main {
+    &__poster {
+        width: 100%;
+        @include adaptiv-paddings(120, 200, 100, 0);
+        text-align: center;
+        background-image: url(../images/IMAGE.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.poster {
+    &__description {
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 12px;
+        @include adaptiv-font(12, 10);
+        line-height: 22px;
+        margin-bottom: 15px;
+        /* identical to box height, or 183% */
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        color: $highlited;
+    }
+    &__title {
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 70px;
+        @include adaptiv-font(70, 30);
+        line-height: 80px;
+        margin-bottom: 35px;
+        /* or 114% */
+
+        letter-spacing: 1px;
+
+        color: #FFFFFF;
+    }
+    &__button {
+        padding: 14px 25px;
+        background: $highlited;
+        border-radius: 0px;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 22px;
+        /* identical to box height, or 200% */
+
+        text-transform: uppercase;
+        
+        color: $main-dark;        
+    }
+}
+
+.portfolio {
+    &__img {
+        width: 100%;
+        padding-top: 120px;
+    }
+    &__container {
+        @include adaptiv-paddings(120, 0, 120, 0);
+        text-align: center;        
+    }
+    &__title {
+        margin-bottom: 60px;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 60px;
+        @include adaptiv-font(60, 25);
+        line-height: 70px;
+        /* identical to box height, or 117% */
+        
+        color: $highlited;
+    }
+    &__sup-title {
+        margin-bottom: 10px;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 12px;
+        @include adaptiv-font(12, 10);
+        line-height: 22px;
+        /* identical to box height, or 183% */
+        
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+.cases {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @media (max-width: 480px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &__card {
+        border: 1px solid #4B4136;
+        border-radius: 0px;
+        padding: 26px 0 41px 0;
+    }
+}
+
+.card {
+    &__title {
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 13px;
+        @include adaptiv-font(13, 11);
+        line-height: 23px;
+        /* identical to box height, or 177% */
+        
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        
+        color: #FFFFFF;        
+    }
+    &__title-highlited {
+        margin: 20px 0 10px 0;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 29px;
+        @include adaptiv-font(29, 20);
+        line-height: 40px;
+        /* identical to box height, or 138% */
+
+        color: $highlited;
+    }
+    &__text {
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 15px;
+        @include adaptiv-font(15, 13);
+        line-height: 26px;
+        /* identical to box height, or 173% */    
+    }
+}
+
+.services {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include adaptiv-paddings(0, 200, 120, 0);
+
+        @media (max-width: 768px) {
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+}
+
+.inst {
+    &__container {
+        @include adaptiv-paddings(0, 0, 120, 0);
+    }
+    &__img-container {
+        display: flex;
+        gap: 1px;
+    }
+    & hr {
+        background-color: $main-text;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 20px
+    }
+    &__follow {
+        background-image: url(../images/inst/IMAGEinst.svg);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        flex-grow: 1;
+        background-position: center center;
+        padding: 40px 0 61px 0;
+        position: relative;
+        & p {
+            font-family: 'Old Standard TT';
+            font-style: normal;
+            font-weight: 400;
+            //font-size: 40px;
+            @include adaptiv-font(40, 30);
+            line-height: 50px;
+            width: 100%;
+            text-align: center;
+            /* identical to box height, or 125% */            
+            
+            color: $highlited;            
+        }
+        &::before {
+            content: url(../images/inst/FrameInst.svg);
+            position: absolute;
+            left: calc(50% - 61px);
+            bottom: 30px;
+            z-index: -1;
+        }
+    }
+    &__help {
+        position: relative;
+        &::before {
+            content: url(../images/inst/IMAGEinst.svg);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: -35px;
+            left: calc(50% - 25px);
+        }
+    }
+}
+
+.follow {
+    &__container {
+        @include adaptiv-paddings(146, 43, 120, 0);
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 60px;
+        @include adaptiv-font(60, 25);
+        line-height: 70px;
+        /* or 117% */
+        
+        text-align: center;
+        
+        color: $highlited;
+    }
+    &__text {
+        margin-top: 20px;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 12px;
+        @include adaptiv-font(12, 10);
+        line-height: 28px;
+        /* identical to box height, or 233% */        
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 510px;
+        margin: 80px auto 30px auto;
+    }
+    &__input {
+        padding: 10px 10px;
+        border: 1px solid #4b4136;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 14px;
+        @include adaptiv-font(14, 11);
+        line-height: 20px;
+        /* identical to box height, or 143% */
+    }
+    &__button {
+        padding: 10px 10px;
+        background-color: $highlited;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 14px;
+        @include adaptiv-font(14, 11);
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        
+        text-align: center;
+        color: $main-dark;
+    }
+    &__socials {
+        margin-top: 40px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    &__icon {
+        padding: 14px;
+        border: 1px solid #4B4136;
+    }
+}
+
+.footer {
+    & hr {
+        width: calc(100% - 240px);
+        margin: 0 auto;
+        height: 1px;
+        background-color: #4B4136;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiv-paddings(25, 25, 120, 0);
+    }
+    &__links {
+        display: flex;
+        gap: 8px;
+    }
+    &__link {
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 20px;
+        /* identical to box height, or 273% */        
+        color: $highlited;    
+
+        &:not(:first-child) {
+            border-left: 1px solid #4B4136;
+            padding-left: 8px;
+        }             
+    }
+    &__text{
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        //font-size: 12px;
+        @include adaptiv-font(12, 10);
+        line-height: 22px;
+    }
+}
+
+.highlited {
+    color: $highlited;
+}
