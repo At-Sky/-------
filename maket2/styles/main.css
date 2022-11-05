@@ -99,19 +99,19 @@ legend {
 
 @font-face {
   font-family: "Old Standard TT";
-  src: url(/maket2/font/OldStandardTT-Italic.ttf);
+  src: url(../font/OldStandardTT-Italic.ttf);
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Old Standard TT";
-  src: url(/maket2/font/OldStandardTT-Regular.ttf);
+  src: url(../font/OldStandardTT-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Old Standard TT";
-  src: url(/maket2/font/OldStandardTT-Bold.ttf);
+  src: url(../font/OldStandardTT-Bold.ttf);
   font-weight: bold;
   font-style: normal;
 }
@@ -192,7 +192,7 @@ body {
   width: 100%;
   padding: 120px calc(0px + 100 * ((100vw - 320px) / 1120)) 200px calc(0px + 100 * ((100vw - 320px) / 1120));
   text-align: center;
-  background-image: url(/maket2/Images/IMAGE.png);
+  background-image: url(../Images/IMAGE.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -338,7 +338,7 @@ body {
   margin-bottom: 20px;
 }
 .inst__follow {
-  background-image: url(/maket2/Images/inst/IMAGEinst.svg);
+  background-image: url(../Images/inst/IMAGEinst.svg);
   background-repeat: no-repeat;
   background-size: 50%;
   flex-grow: 1;
@@ -358,7 +358,7 @@ body {
   color: #FFAE2B;
 }
 .inst__follow::before {
-  content: url(/maket2/Images/inst/FrameInst.svg);
+  content: url(../Images/inst/FrameInst.svg);
   position: absolute;
   left: calc(50% - 61px);
   bottom: 30px;
@@ -368,7 +368,7 @@ body {
   position: relative;
 }
 .inst__help::before {
-  content: url(/maket2/Images/inst/IMAGEinst.svg);
+  content: url(../Images/inst/IMAGEinst.svg);
   width: 50px;
   height: 50px;
   position: absolute;
