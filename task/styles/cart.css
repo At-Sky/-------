@@ -1,0 +1,117 @@
+.cart__container {
+    border-radius: 8px;
+    border: 5px solid #F5F5F5;
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__title {
+    text-align: center;
+}
+
+.products-list {
+    margin-top: 10px;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    /* background-color: #F4F4F4; */
+}
+
+.products-list__item {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: minmax(80px, 1fr) 200px auto;
+    gap: 10px;
+    grid-template-areas:
+    'image title buttons'
+    'image price summary';
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.703); */
+}
+
+.cart__buy-button {
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: flex-end;
+    display: none;
+    transition: 0.2s;
+}
+
+.cart__buy-button:hover {
+    background-color: rgb(112, 224, 244);
+    color: #F5F5F5;
+    border: 2px solid rgb(112, 224, 244);
+}
+
+.cart__buy-button.active {
+    display: block;
+}
+
+.cart__empty {
+    text-align: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.812);
+    padding-top: 15px;
+}
+
+.products-list__item:not(:last-child) {
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+}
+
+.products-list__item:not(:first-child) {
+    margin-top: 15px;
+}
+
+.prod__image {
+    width: 50px;
+    grid-area: image;
+}
+
+.prod__price {
+    grid-area: price;
+    align-self: center;
+}
+
+.prod__title {
+    grid-area: title;
+    font-size: 15px;
+}
+
+.product__buttons-container {
+    padding: 3px;
+    grid-area: buttons;
+    align-self: flex-end;
+    column-gap: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prod__summary {
+    grid-area: summary;
+    justify-self: center;
+}
+
+.product__minus, .product__plus {
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    width: 24px;
+    border-radius: 50%;
+}
+
+.product__counter {
+    justify-self: center;
+    align-self: center;
+    font-size: 17px;
+}

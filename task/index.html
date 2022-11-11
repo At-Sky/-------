@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="overlay">
+        <form action="POST" id="form" autocomplete="off" class="form">
+            <h1 class="form__title">Оcтавьте заявку</h1>
+            <label class="form__group" for="name">Введите имя
+            <input type="text" class="form__input form__input_name" id="name"></label>
+
+            <label class="form__group" for="phone">Введите телефон
+            <input type="text" class="form__input form__input_phone" id="phone"></label>
+
+            <label class="form__group" for="email">Введите почту
+            <input type="text" class="form__input form__input_email" id="email"></label>
+
+            <button type="submit" class="form__button">Отправить</button>
+        </form>
+    </div>
+    <section>
+        <div class="section__container">
+            <div class="cards-list">
+                <div class="cards-list__container">
+                    <div class="card-list__item card">
+                        <img src="" alt="" class="card__image">
+                        <h1 class="card__title"></h1>
+                        <span class="card__price"></span>
+                        <p class="card__description"></p>
+                        <button class="card__button">Добавить</button>
+                    </div>
+                    <div class="card-list__item card">
+                        <img src="" alt="" class="card__image">
+                        <h1 class="card__title">Товар 1</h1>
+                        <span class="card__price">32042</span>
+                        <p class="card__description">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugit
+                            maiores id magni ullam atque dolor exercitationem beatae quas sed.</p>
+                        <button class="card__button">Добавить</button>
+                    </div>
+                    <div class="card-list__item card">
+                        <img src="" alt="" class="card__image">
+                        <h1 class="card__title">Товар 1</h1>
+                        <span class="card__price">32042</span>
+                        <p class="card__description">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugit
+                            maiores id magni ullam atque dolor exercitationem beatae quas sed.</p>
+                        <button class="card__button">Добавить</button>
+                    </div>
+                    <div class="card-list__item card">
+                        <img src="" alt="" class="card__image">
+                        <h1 class="card__title">Товар 1</h1>
+                        <span class="card__price">32042</span>
+                        <p class="card__description">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugit
+                            maiores id magni ullam atque dolor exercitationem beatae quas sed.</p>
+                        <button class="card__button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="cart__container">
+                    <h1 class="cart__title">Корзина</h1>
+                    <div class="products-list">
+
+                    </div>
+                    <button class="cart__buy-button">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="https://unpkg.com/imask"></script> -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script type="module" src="/task/scripts/fakestore.js"></script>
+    <script type="module" src="/task/scripts/cart.js"></script>
+    <script type="module" src="/task/scripts/form-modal.js"></script>
+    <script type="module" src="/task/scripts/form.js"></script>
+</body>
+</html>
