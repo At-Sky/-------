@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/maket1/images/up_bg.png);
+    background-image: url(/layout1/images/up_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -39,7 +39,7 @@
     right: 60px;
     width: calc(100% - 120px);
     height: 60%;
-    background-image: url(/maket1/images/dots.svg);
+    background-image: url(/layout1/images/dots.svg);
     background-size: contain;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .about__button::before {
-    content: url(/maket1/images/Vector.svg);
+    content: url(/layout1/images/Vector.svg);
     position: absolute;
     top: calc(50% - 10px);
     right: 40px;

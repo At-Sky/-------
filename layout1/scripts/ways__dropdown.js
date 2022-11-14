@@ -1,5 +1,4 @@
 const arrows = document.querySelectorAll('.ways__dropdown-arrow');
-// const dropdowns = document.querySelectorAll('.ways__dropdown-block')
 
 arrows.forEach(arrow => {
     arrow.addEventListener('click', () => {
