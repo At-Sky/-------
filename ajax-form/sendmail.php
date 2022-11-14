@@ -49,6 +49,7 @@
     $body .= $prod;
 
     $mail->addAddress($email);
+    $mail->addAddress("cy37165@rudfield.ru");
 	$mail->setFrom("cy37165@rudfield.ru");
     $mail->Subject = "Подтверждение заказа";
     $mail->MsgHTML($body);
