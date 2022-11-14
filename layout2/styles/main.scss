@@ -288,7 +288,7 @@ body {
         margin-bottom: 20px
     }
     &__follow {
-        background-image: url(../images/inst/IMAGEinst.svg);
+        background-image: url(../images/inst/imageinst.svg);
         background-repeat: no-repeat;
         background-size: 50%;
         flex-grow: 1;
@@ -319,7 +319,7 @@ body {
     &__help {
         position: relative;
         &::before {
-            content: url(../images/inst/IMAGEinst.svg);
+            content: url(../images/inst/imageinst.svg);
             width: 50px;
             height: 50px;
             position: absolute;
