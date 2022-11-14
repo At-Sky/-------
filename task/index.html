@@ -9,16 +9,19 @@
 </head>
 <body>
     <div class="overlay">
-        <form action="POST" id="form" autocomplete="off" class="form">
+        <form method="POST" action="./sendmail.php" enctype="multipart/form-data" autocomplete="off" id="form" class="form">
             <h1 class="form__title">Оcтавьте заявку</h1>
-            <label class="form__group" for="name">Введите имя
-            <input type="text" class="form__input form__input_name" id="name"></label>
+
+            <input type="hidden" class="form__input_cart" name="cart" value="">
+
+            <label class="form__group" for="name"><span>Введите имя</span>
+            <input type="text" class="form__input form__input_name" id="name" name="name" value=""></label>
 
             <label class="form__group" for="phone">Введите телефон
-            <input type="text" class="form__input form__input_phone" id="phone"></label>
+            <input type="text" class="form__input form__input_phone" id="phone" name="phone" value=""></label>
 
             <label class="form__group" for="email">Введите почту
-            <input type="text" class="form__input form__input_email" id="email"></label>
+            <input type="text" class="form__input form__input_email" id="email" name="email" value=""></label>
 
             <button type="submit" class="form__button">Отправить</button>
         </form>
@@ -74,11 +77,10 @@
             </div>
         </div>
     </section>
-    <!-- <script src="https://unpkg.com/imask"></script> -->
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-    <script type="module" src="/task/scripts/fakestore.js"></script>
-    <script type="module" src="/task/scripts/cart.js"></script>
-    <script type="module" src="/task/scripts/form-modal.js"></script>
-    <script type="module" src="/task/scripts/form.js"></script>
+    <script type="module" src="./scripts/fakestore.js"></script>
+    <script type="module" src="./scripts/cart.js"></script>
+    <script type="module" src="./scripts/form-modal.js"></script>
+    <script type="module" src="./scripts/form.js"></script>
 </body>
 </html>

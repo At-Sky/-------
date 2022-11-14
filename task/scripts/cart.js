@@ -1,10 +1,10 @@
-import { getProds } from "../scripts/fakestore.js";
+import { getProds } from "./fakestore.js";
 
 const addButtons = document.querySelectorAll('.card__button')
 const cartContainer = document.querySelector('.products-list')
 const buyButton = document.querySelector('.cart__buy-button')
 
-let cart = []
+export let cart = []
 
 addButtons.forEach((button, index) => {
     button.addEventListener('click', () => addProd(index + 1))
@@ -25,9 +25,6 @@ async function addProd(id) {
 updateCart(cart) //первый вызов для пустой корзины
 
 function updateCart(cart) { 
-    // cart.map(item => {
-    //     item.amount = 1
-    // })
 
     let result = cart.reduce((acc, n) => (acc[n.id] = (acc[n.id] || 0) + 1, acc), {});
 
@@ -60,6 +57,7 @@ function updateCart(cart) {
         buyButton.classList.add('active')
         addEvents()
     } else {
+        buyButton.classList.remove('active')
         cartContainer.innerHTML = '<p class="cart__empty">Добавьте товар</p>'
     }
 }
@@ -82,8 +80,6 @@ function increaseProd(target) {
     let prodId = target.attributes[1].value
 
     let prod = cart.find(item => item.id == prodId ? true : false)
-
-    console.log(cart)
 
     cart.push(prod)
     updateCart(cart)

@@ -43,8 +43,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    /* background-color: rgba(0, 0, 0, 0.4); */
-    background: rgba(159, 159, 159, 0.4) url(/task/loading.gif) center center no-repeat;
+    background: rgba(159, 159, 159, 0.4) url(../loading.gif) center center no-repeat;
     background-size: 80px;
     top: 0;
     left: 0;
@@ -58,6 +57,14 @@
     gap: 5px;
     justify-content: space-between;
 }
+
+@media (max-width: 320px) {
+    .form__group {
+        min-width: unset;
+        font-size: 15px;
+    }
+}
+
 
 .form__button {
     margin-top: 30px;

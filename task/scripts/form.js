@@ -1,6 +1,7 @@
-const form = document.querySelector('.form');
+import { cart } from "./scripts/cart.js";
+
+const cartInput = document.querySelector('.form__input_cart')
 const validation = new JustValidate('#form');
-let success;
 
 validation
   .addField('#name', [
@@ -26,8 +27,8 @@ validation
       errorMessage: 'Телефон неверен',
     },
     {
-        rule: 'required',
-        errorMessage: 'Поле обязательно',
+      rule: 'required',
+      errorMessage: 'Поле обязательно',
     },
   ])
   .addField('#email', [
@@ -39,32 +40,41 @@ validation
       rule: 'email',
       errorMessage: 'Адрес неверен',
     },
-  ]).onSuccess((event) => {
-    console.log('Validation passes and form submitted', event);
-    success = event
-    formSend(event, success)
-    console.log(success)
-  });
+  ]).onSuccess(() => {
+    let formData = new FormData(form);
+    formSend(formData)
+  })
 
-async function formSend(e, success) {
-  e.preventDefault()
+async function formSend(formData) {
+  cartInput.value = formatCart(cart)
 
-  let formData = new FormData(form)
-  console.log(success)
-  if (success) {
-    form.classList.add('form_loading')
-    console.log(success)
-    let response = await fetch('sendmail.php', {
-      method: 'POST', 
-      body: formData
-    })
+  form.classList.add('form_loading')
 
-    if (response.ok) {
-      let result = await response.json()
+  let response = await fetch('./sendmail.php', {
+    method: 'POST', 
+    body: formData,
+  })
 
-      formPreview.innerHTML = ''
-      form.reset()
-      form.classList.remove('form_loading')
-    }
+  if (response.ok) {
+    form.reset()
+    form.classList.remove('form_loading')
   }
+
+}
+
+
+function formatCart(cart) {
+
+  let list = []
+
+  let reduced = cart.reduce((acc, n) => (acc[n.id] = (acc[n.id] || 0) + 1, acc), {});
+
+  Object.keys(reduced).forEach((key) => {
+    let prod = cart.find(item => item.id == key ? true : false)
+    list.push(prod)
+  })
+
+  list.map((item) => item.amount = reduced[item.id])
+
+  return JSON.stringify(list)
 }
