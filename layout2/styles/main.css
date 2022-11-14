@@ -192,7 +192,7 @@ body {
   width: 100%;
   padding: 120px calc(0px + 100 * ((100vw - 320px) / 1120)) 200px calc(0px + 100 * ((100vw - 320px) / 1120));
   text-align: center;
-  background-image: url(../Images/IMAGE.png);
+  background-image: url(../images/image.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -338,7 +338,7 @@ body {
   margin-bottom: 20px;
 }
 .inst__follow {
-  background-image: url(../Images/inst/imageinst.svg);
+  background-image: url(../images/inst/imageinst.svg);
   background-repeat: no-repeat;
   background-size: 50%;
   flex-grow: 1;
@@ -358,7 +358,7 @@ body {
   color: #FFAE2B;
 }
 .inst__follow::before {
-  content: url(../Images/inst/FrameInst.svg);
+  content: url(../images/inst/FrameInst.svg);
   position: absolute;
   left: calc(50% - 61px);
   bottom: 30px;
@@ -368,7 +368,7 @@ body {
   position: relative;
 }
 .inst__help::before {
-  content: url(../Images/inst/imageinst.svg);
+  content: url(../images/inst/imageinst.svg);
   width: 50px;
   height: 50px;
   position: absolute;
