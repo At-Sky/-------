@@ -1,0 +1,260 @@
+@import './font/stylesheet';
+@import './styles/reset';
+
+$maxWidth: 1920;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-paddings($top, $bottom, $pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+    $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    
+    padding: #{$top + px} $result #{$bottom + px} $result;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    padding: 54px 0 115px 0;
+
+    &__phone {
+        position: relative;
+        margin-left: 100px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 122.8%;
+        /* or 22px */
+
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+        &::before {
+            content: url(./images/header/phone-icon.svg);
+            position: absolute;
+            top: -7px;
+            left: -43px;
+        }
+    }
+}
+
+
+.section {
+    @include adaptiv-paddings(0, 0, 320, 0);
+    &_blue {
+        background-image: url(./images/header/bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: -2;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: url(./images/header/bgvectors.svg) center center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+.nav-list {
+    display: flex;
+    gap: 38px;
+
+    &__item {
+        font-family: 'FuturaFuturisC';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 122.8%;
+        color: #969AF7;
+    }
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__title {
+        font-family: 'FuturaFuturisC';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 69.23px;
+        line-height: 99.8%;
+        color: #FFFFFF;
+        text-transform: uppercase;
+
+        &_colored {
+            display: block;
+            text-transform: lowercase;
+            color: #969AF7;
+        }
+    }
+    &__description {
+        margin-bottom: 27px;
+        font-family: 'FuturaBookC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 129.8%;
+        /* or 30px */
+
+        color: #969AF7;                
+    }
+    &__benefits-list {
+        padding: 34px 31px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #969AF7 1.34%, rgba(150, 154, 247, 0) 96.66%);
+            opacity: 0.3;
+            border-radius: 10px;
+        }
+        
+        .benefits-list__item {
+            list-style-image: url(./images/about/check.svg);
+            list-style-position: inside;
+            font-family: 'FuturaBookC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 129.8%;
+            /* identical to box height, or 29px */            
+            
+            color: #FFFFFF;   
+            
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.form {
+    &__header {
+        padding: 32px 0 24px;
+        background: linear-gradient(180deg, #6A32B4 0%, #552693 100%);
+        border-radius: 10px 10px 0px 0px;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'FuturaFuturisC';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 27px;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__body {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding: 30px 40px 36px 40px;
+        background: #FFFFFF;
+        border: 1px solid #F2F3F5;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    &__group {
+        font-family: 'FuturaBookC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 128.91%;
+        /* or 23px */
+
+        /* gray_2 */
+
+        color: #626366;
+    }
+
+    &__input {
+        padding: 21px 20px;
+        width: 100%;
+        height: 55px;
+        background: #F5F3FF;
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        &_::placeholder {
+            font-family: 'FuturaBookC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 128.91%;
+ 
+            color: #BCBFC4;
+        }
+    }
+
+    &__button {
+        margin-top: 25px;
+        padding: 19px 0;
+        background: #FFA500;
+        border-radius: 10px;
+        font-family: 'FuturaFuturisC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 19px;
+        /* identical to box height, or 106% */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+
+    &__privacy {
+        display: block;
+        font-family: 'FuturaBookC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        position: relative;
+        /* identical to box height */
+
+        // align-items: center;
+
+        color: #C0C0C0;
+
+        &::before {
+            content: url(./images/about/lock.svg);
+            // background: url(./images/about/lock.svg) center center;
+            position: absolute;
+            top: 0;
+            left: -25px;
+        }
+    }
+}

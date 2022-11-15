@@ -192,7 +192,7 @@ body {
   width: 100%;
   padding: 120px calc(0px + 100 * ((100vw - 320px) / 1120)) 200px calc(0px + 100 * ((100vw - 320px) / 1120));
   text-align: center;
-  background-image: url(../images/image.png);
+  background-image: url(../images/IMAGE.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
